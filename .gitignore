@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+tmp/
+.kilo/
+.idea/
+.vscode/
+vault.json.enc
+salt.bin
+audit.log
+fail.json
+*.env
