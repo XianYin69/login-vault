@@ -1,6 +1,6 @@
 # scripts（脚本库）
 
-凭据管理脚本：英文小写命名，均 ≤50 行；数据只写固定缓存 `login_vault/`（`LOGIN_VAULT_HOME` 可覆盖），不写 skill 目录。
+凭据管理脚本：英文小写命名，不限行数（50 行红线仅限 markdown）；数据只写固定缓存 `login_vault/`（`LOGIN_VAULT_HOME` 可覆盖），不写 skill 目录。
 
 - [`vault_paths.py`](vault_paths.py)：平台固定缓存解析（win=%LOCALAPPDATA% · mac=~/Library/Caches · linux=~/.cache）；`paths()` 四文件（salt.bin / vault.json.enc / audit.log / fail.json）、`master()`（env 或 getpass，不落历史）、`audit()` 追加、`today()`。
 - [`vault_store.py`](vault_store.py)：`crypto()` 依赖守卫（缺 cryptography 报确认式建议）；`key()` PBKDF2-HMAC-SHA256 310k 次派生 Fernet 密钥；`load()` 解密+连错5次锁60s+清零计数；`save()` 加密回写。

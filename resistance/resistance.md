@@ -10,7 +10,7 @@ login-vault 红线与降级策略；不得删除本目录约束条目。
 4. 只管理**用户本人所有**的账号凭据；拒绝存储、获取、尝试他人凭据——本 skill 不是渗透工具。
 5. 不自动安装依赖（缺 cryptography 报确认后安装）；不联网、不同步、不上传密文（用户明示的多设备同步除外）。
 6. note 字段禁放助记词/私钥/恢复码等不可重置秘密（引导冷备份）；SMS privacy 采集中 credential 类别按 privacy_cat 默认 1 天留存。
-7. 悬空链接 = 0；所有 .md / 脚本 ≤ 50 行；SKILL.md 含 YAML frontmatter；缓存不落 skill 目录。
+7. 悬空链接 = 0；所有 .md ≤ 50 行（50 行红线只约束 markdown 文本；脚本 .py/.ps1/.sh/.cmd 不限行数，但仍禁裸 except、print 调试残留、>100 字符长行、超长函数）；SKILL.md 含 YAML frontmatter；缓存不落 skill 目录。
 
 ## 降级策略
 
