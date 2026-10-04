@@ -1,5 +1,6 @@
 ---
 name: login-vault
+version: 0.1.0
 description: >
   本地加密登录信息管理 skill：邮箱/账号+口令的 Fernet(PBKDF2-310k) 加密保管、强密码生成、
   轮换与追加式审计；主密码永不落盘，list/rotate 恒掩码，明文仅 get --yes 且逐笔记审计，
